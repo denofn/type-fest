@@ -5,7 +5,7 @@ Merge two types into a new type. Keys of the second type overrides keys of the f
 
 @example
 ```
-import {Merge} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {Merge} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/mod.ts';
 
 type Foo = {
 	a: number;

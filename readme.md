@@ -38,7 +38,7 @@ $ npm install type-fest
 ## Usage
 
 ```ts
-import {Except} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {Except} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/mod.ts';
 
 type Foo = {
 	unicorn: string;

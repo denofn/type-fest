@@ -9,7 +9,7 @@ This type is a workaround for [Microsoft/TypeScript#29729](https://github.com/Mi
 
 @example
 ```
-import {LiteralUnion} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {LiteralUnion} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/mod.ts';
 
 // Before
 

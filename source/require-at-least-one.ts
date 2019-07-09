@@ -5,7 +5,7 @@ Create a type that requires at least one of the given properties. The remaining 
 
 @example
 ```
-import {RequireAtLeastOne} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {RequireAtLeastOne} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/mod.ts';
 
 type Responder = {
 	text?: () => string;

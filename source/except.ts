@@ -7,7 +7,7 @@ Please upvote [this issue](https://github.com/microsoft/TypeScript/issues/30825)
 
 @example
 ```
-import {Except} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {Except} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/mod.ts';
 
 type Foo = {
 	a: number;

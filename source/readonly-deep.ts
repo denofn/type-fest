@@ -15,7 +15,7 @@ Please upvote [this issue](https://github.com/microsoft/TypeScript/issues/13923)
 }
 
 // main.ts
-import {ReadonlyDeep} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {ReadonlyDeep} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/mod.ts';
 import dataJson = require('./data.json');
 
 const data: ReadonlyDeep<typeof dataJson> = dataJson;
