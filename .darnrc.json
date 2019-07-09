@@ -1,0 +1,12 @@
+{
+  "name": "type-fest",
+  "version": "v0.6.0",
+  "description": "A collection of essential TypeScript types",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com"
+  },
+  "config": {
+    "deno": "0.11.0"
+  }
+}
