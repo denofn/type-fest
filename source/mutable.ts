@@ -5,7 +5,7 @@ This can be used to [store and mutate options within a class](https://github.com
 
 @example
 ```
-import {Mutable} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/mod.ts';
+import {Mutable} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
 
 type Foo = {
 	readonly a: number;
