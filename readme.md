@@ -17,8 +17,6 @@
 [![npm dependents](https://badgen.net/npm/dependents/type-fest)](https://www.npmjs.com/package/type-fest?activeTab=dependents) [![npm downloads](https://badgen.net/npm/dt/type-fest)](https://www.npmjs.com/package/type-fest)
 -->
 
-**NOTE: this project is a direct port of [sindresorhus/type-fest](https://github.com/sindresorhus/type-fest), but with the imports/exports corrected for Deno**
-
 Many of the types here should have been built-in. You can help by suggesting some of them to the [TypeScript project](https://github.com/Microsoft/TypeScript/blob/master/CONTRIBUTING.md).
 
 Either add this package as a dependency or copy-paste the needed types. No credit required. 👌
@@ -38,7 +36,7 @@ $ npm install type-fest
 ## Usage
 
 ```ts
-import {Except} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {Except} from 'type-fest';
 
 type Foo = {
 	unicorn: string;

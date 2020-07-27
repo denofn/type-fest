@@ -1,4 +1,4 @@
-import { Primitive } from './basic.ts';
+import {Primitive} from './basic';
 
 /**
 Convert `object`s, `Map`s, `Set`s, and `Array`s and all of their properties/elements into immutable structures recursively.
@@ -15,7 +15,7 @@ Please upvote [this issue](https://github.com/microsoft/TypeScript/issues/13923)
 }
 
 // main.ts
-import {ReadonlyDeep} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {ReadonlyDeep} from 'type-fest';
 import dataJson = require('./data.json');
 
 const data: ReadonlyDeep<typeof dataJson> = dataJson;
@@ -29,7 +29,7 @@ data.foo.push('bar');
 //=> error TS2339: Property 'push' does not exist on type 'readonly string[]'
 ```
 */
-export type ReadonlyDeep<T> = T extends Primitive | ((...args: any[]) => unknown)
+export type ReadonlyDeep<T> = T extends Primitive | ((...arguments: any[]) => unknown)
 	? T
 	: T extends ReadonlyMap<infer KeyType, infer ValueType>
 	? ReadonlyMapDeep<KeyType, ValueType>

@@ -1,11 +1,11 @@
-import { Except } from "./except.ts";
+import {Except} from './except';
 
 /**
 Merge two types into a new type. Keys of the second type overrides keys of the first type.
 
 @example
 ```
-import {Merge} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {Merge} from 'type-fest';
 
 type Foo = {
 	a: number;

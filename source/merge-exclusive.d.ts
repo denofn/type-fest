@@ -10,7 +10,7 @@ This type works with a helper type, called `Without`. `Without<FirstType, Second
 
 @example
 ```
-import {MergeExclusive} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {MergeExclusive} from 'type-fest';
 
 interface ExclusiveVariation1 {
 	exclusive1: boolean;

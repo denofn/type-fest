@@ -7,7 +7,7 @@ Please upvote [this issue](https://github.com/microsoft/TypeScript/issues/30825)
 
 @example
 ```
-import {Except} from 'https://cdn.jsdelivr.net/gh/denoserverless/type-fest/index.d.ts';
+import {Except} from 'type-fest';
 
 type Foo = {
 	a: number;
@@ -19,7 +19,4 @@ type FooWithoutA = Except<Foo, 'a' | 'c'>;
 //=> {b: string};
 ```
 */
-export type Except<ObjectType, KeysType extends keyof ObjectType> = Pick<
-  ObjectType,
-  Exclude<keyof ObjectType, KeysType>
->;
+export type Except<ObjectType, KeysType extends keyof ObjectType> = Pick<ObjectType, Exclude<keyof ObjectType, KeysType>>;
