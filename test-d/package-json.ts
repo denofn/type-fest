@@ -1,4 +1,4 @@
-import {expectType} from 'tsd';
+import {expectType, expectAssignable} from 'tsd';
 import {PackageJson, LiteralUnion} from '..';
 
 const packageJson: PackageJson = {};
@@ -21,7 +21,7 @@ expectType<string | undefined>(packageJson.types);
 expectType<string | undefined>(packageJson.typings);
 expectType<string | string[] | undefined>(packageJson.man);
 expectType<PackageJson.DirectoryLocations | undefined>(packageJson.directories);
-expectType<{type: string; url: string} | string | undefined>(
+expectType<{type: string; url: string; directory?: string} | string | undefined>(
 	packageJson.repository
 );
 expectType<PackageJson.Scripts | undefined>(packageJson.scripts);
@@ -35,16 +35,17 @@ expectType<PackageJson.Dependency | undefined>(packageJson.peerDependencies);
 expectType<string[] | undefined>(packageJson.bundleDependencies);
 expectType<string[] | undefined>(packageJson.bundledDependencies);
 expectType<PackageJson.Dependency | undefined>(packageJson.resolutions);
+expectType<PackageJson.WorkspaceConfig | string[] | undefined>(packageJson.workspaces);
 expectType<{[engineName: string]: string} | undefined>(packageJson.engines);
 expectType<boolean | undefined>(packageJson.engineStrict);
-expectType<
+expectAssignable<
 	| undefined
 	| Array<LiteralUnion<
 			'darwin' | 'linux' | 'win32' | '!darwin' | '!linux' | '!win32',
 			string
 	>>
 >(packageJson.os);
-expectType<
+expectAssignable<
 	| undefined
 	| Array<LiteralUnion<
 			'x64' | 'ia32' | 'arm' | 'mips' | '!x64' | '!ia32' | '!arm' | '!mips',
@@ -58,9 +59,9 @@ expectType<string | undefined>(packageJson.module);
 expectType<
 	| string
 	| {
+		[moduleName: string]: string | undefined;
 		main?: string;
 		browser?: string;
-		[moduleName: string]: string | undefined;
 	}
 	| undefined
 >(packageJson.esnext);
