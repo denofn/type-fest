@@ -17,6 +17,21 @@
 [![npm dependents](https://badgen.net/npm/dependents/type-fest)](https://www.npmjs.com/package/type-fest?activeTab=dependents) [![npm downloads](https://badgen.net/npm/dt/type-fest)](https://www.npmjs.com/package/type-fest)
 -->
 
+**NOTE: this is a maintained fork for Deno of the [original](https://github.com/sindresorhus/type-fest)! Go support [sindresorhus](https://github.com/sindresorhus) for creating this project!**
+
+## Deno Example
+```ts
+import type {Except} from 'https://cdn.jsdelivr.net/gh/denofn/type-fest@latest/mod.ts';
+
+type Foo = {
+	unicorn: string;
+	rainbow: boolean;
+};
+
+type FooWithoutRainbow = Except<Foo, 'rainbow'>;
+//=> {unicorn: string}
+```
+
 Many of the types here should have been built-in. You can help by suggesting some of them to the [TypeScript project](https://github.com/Microsoft/TypeScript/blob/master/CONTRIBUTING.md).
 
 Either add this package as a dependency or copy-paste the needed types. No credit required. 👌

@@ -13,19 +13,19 @@ Please upvote [this issue](https://github.com/microsoft/TypeScript/issues/31438)
 }
 
 // main.ts
-import {ValueOf} from 'type-fest';
-import data = require('./data.json');
+import type {ValueOf} from 'type-fest';
+import type data = require('./data.json');
 
-export function getData(name: string): ValueOf<typeof data> {
+export type function getData(name: string): ValueOf<typeof data> {
 	return data[name];
 }
 
-export function onlyBar(name: string): ValueOf<typeof data, 'bar'> {
+export type function onlyBar(name: string): ValueOf<typeof data, 'bar'> {
 	return data[name];
 }
 
 // file.ts
-import {getData, onlyBar} from './main';
+import type {getData, onlyBar} from './main.d.ts';
 
 getData('foo');
 //=> 1

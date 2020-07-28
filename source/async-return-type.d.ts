@@ -1,4 +1,4 @@
-import {PromiseValue} from './promise-value';
+import type {PromiseValue} from './promise-value.d.ts';
 
 type AsyncFunction = (...args: any[]) => Promise<unknown>;
 
@@ -9,8 +9,8 @@ There has been [discussion](https://github.com/microsoft/TypeScript/pull/35998) 
 
 @example
 ```ts
-import {AsyncReturnType} from 'type-fest';
-import {asyncFunction} from 'api';
+import type {AsyncReturnType} from 'type-fest';
+import type {asyncFunction} from 'api';
 
 // This type resolves to the unwrapped return type of `asyncFunction`.
 type Value = AsyncReturnType<typeof asyncFunction>;

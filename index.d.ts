@@ -1,5 +1,13 @@
 // Basic
-export * from './source/basic';
+export {
+	Primitive,
+	Class,
+	TypedArray,
+	JsonObject,
+	JsonArray,
+	JsonValue,
+	ObservableLike
+} from './source/basic';
 
 // Utilities
 export {Except} from './source/except';
